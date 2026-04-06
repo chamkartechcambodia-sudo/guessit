@@ -47,17 +47,17 @@ class GameFragment : Fragment() {
         binding.setLifecycleOwner(this)
 
         // Sets up event listening to navigate the player when the game is finished
-        viewModel.eventGameFinish.observe(viewLifecycleOwner, Observer { isFinished ->
+        viewModel.eventGameFinish.observe(viewLifecycleOwner) { isFinished ->
             if (isFinished) {
                 val currentScore = viewModel.score.value ?: 0
                 val action = GameFragmentDirections.actionGameToScore(currentScore)
-                findNavController(this).navigate(action)
+                findNavController().navigate(action)
                 viewModel.onGameFinishComplete()
             }
         })
 
         // Buzzes when triggered with different buzz events
-        viewModel.eventBuzz.observe(viewLifecycleOwner, Observer { buzzType ->
+        viewModel.eventBuzz.observe(viewLifecycleOwner) { buzzType ->
             if (buzzType != GameViewModel.BuzzType.NO_BUZZ) {
                 buzz(buzzType.pattern)
                 viewModel.onBuzzComplete()
