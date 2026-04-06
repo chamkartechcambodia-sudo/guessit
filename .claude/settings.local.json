@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xcopy \"E:\\\\work\\\\migrate\\\\Work\\\\IT STEP\\\\Android JavaKotlin\\\\E17\\\\Day14\\\\andfun-kotlin-guess-it\" \"E:\\\\work\\\\migrate\\\\Work\\\\IT STEP\\\\Android JavaKotlin\\\\E17\\\\Day14\\\\android-kotlin-m3-guessit\" /E /I /H /Y)",
+      "Bash(cmd /c \"xcopy \"\"E:\\\\work\\\\migrate\\\\Work\\\\IT STEP\\\\Android JavaKotlin\\\\E17\\\\Day14\\\\andfun-kotlin-guess-it\"\" \"\"E:\\\\work\\\\migrate\\\\Work\\\\IT STEP\\\\Android JavaKotlin\\\\E17\\\\Day14\\\\android-kotlin-m3-guessit\"\" /E /I /H /Y\")",
+      "Bash(cmd /c \"dir \"\"E:\\\\work\\\\migrate\\\\Work\\\\IT STEP\\\\Android JavaKotlin\\\\E17\\\\Day14\"\"\")",
+      "Bash(powershell.exe -Command \"Copy-Item -Path ''E:\\\\work\\\\migrate\\\\Work\\\\IT STEP\\\\Android JavaKotlin\\\\E17\\\\Day14\\\\andfun-kotlin-guess-it'' -Destination ''E:\\\\work\\\\migrate\\\\Work\\\\IT STEP\\\\Android JavaKotlin\\\\E17\\\\Day14\\\\android-kotlin-m3-guessit'' -Recurse -Force; Write-Host ''Done''\")"
+    ]
+  }
+}
