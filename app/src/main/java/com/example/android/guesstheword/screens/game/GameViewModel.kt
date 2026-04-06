@@ -4,7 +4,7 @@ import android.os.CountDownTimer
 import android.text.format.DateUtils
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Transformations
+import androidx.lifecycle.map
 import androidx.lifecycle.ViewModel
 
 // TODO (03) Copy over the different buzz pattern Long array constants here
@@ -39,7 +39,7 @@ class GameViewModel : ViewModel() {
         get() = _currentTime
 
     // The String version of the current time
-    val currentTimeString = Transformations.map(currentTime) { time ->
+    val currentTimeString = currentTime.map { time ->
         DateUtils.formatElapsedTime(time)
     }
 
