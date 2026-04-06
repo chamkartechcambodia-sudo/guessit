@@ -52,7 +52,7 @@ class ScoreFragment : Fragment() {
                 findNavController().navigate(ScoreFragmentDirections.actionRestart())
                 viewModel.onPlayAgainComplete()
             }
-        }
+        })
 
         return binding.root
     }
