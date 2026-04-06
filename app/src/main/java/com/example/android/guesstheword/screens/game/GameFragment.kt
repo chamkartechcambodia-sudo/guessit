@@ -60,7 +60,7 @@ class GameFragment : Fragment() {
         // TODO (06) Add a null safety check here - you can use the elvis operator to pass 0 if
         // the LiveData is null
         val action = GameFragmentDirections.actionGameToScore(viewModel.score)
-        findNavController(this).navigate(action)
+        findNavController().navigate(action)
     }
 
     /** Methods for updating the UI **/
