@@ -6,9 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.NavHostFragment.findNavController
+import androidx.navigation.fragment.findNavController
 import com.example.android.guesstheword.R
 import com.example.android.guesstheword.databinding.GameFragmentBinding
 
@@ -66,7 +65,7 @@ class GameFragment : Fragment() {
     fun gameFinished() {
         val currentScore = viewModel.score.value ?: 0
         val action = GameFragmentDirections.actionGameToScore(currentScore)
-        findNavController(this).navigate(action)
+        findNavController().navigate(action)
     }
 
 }
